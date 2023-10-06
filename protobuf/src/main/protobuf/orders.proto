@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package com.rockthejvm.protos;
+
+message Item{
+  string name = 1;
+  int32 qty = 2;
+  double amount = 3;
+}
+
+message OrderRequest {
+  int32 orderid = 1;
+  repeated Item items = 2;
+}
+
+//this will be response from Microservice we will get for the Order placed
+message OrderReply {
+  int32 orderid = 1;
+  repeated Item items = 2;
+  double total = 3;
+}
+
+//service
+//stream keyword indicates that the method can return a sequence of messages
+service Order {
+  rpc SendOrderStream (stream OrderRequest) returns (stream OrderReply) {}
+}
