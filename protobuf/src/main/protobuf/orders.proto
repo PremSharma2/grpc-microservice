@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package com.rockthejvm.protos;
+package com.ecom.protos;
 
 message Item{
   string name = 1;

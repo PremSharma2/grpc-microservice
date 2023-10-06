@@ -1,6 +1,6 @@
 package com.ecom.service
 import cats.effect._
-import com.rockthejvm.protos.orders._
+import com.ecom.protos.orders._
 import fs2.grpc.syntax.all._
 import io.grpc._
 import io.grpc.netty.shaded.io.grpc.netty.{NettyChannelBuilder, NettyServerBuilder}
